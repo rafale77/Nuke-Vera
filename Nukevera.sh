@@ -21,10 +21,10 @@ sed -i '9s/.*/#&/' /etc/init.d/lighttpd
 sed -i '10s/.*/#&/' /etc/init.d/lighttpd
 sed -i '11s/.*/#&/' /etc/init.d/lighttpd
 sed -i '3 a exit 0' /etc/init.d/ntpclient
-sed -i '2 a wifi off' /usr/bin/StartNetworkMonitor.sh
-sed -i '3 a ser2net' /usr/bin/StartNetworkMonitor.sh
-sed -i '4 a exit 0' /usr/bin/StartNetworkMonitor.sh
-sed -i '2 a exit 0' /usr/bin/StartLuaUPnP.sh
+sed -i '2 a wifi off' /usr/bin/Start_NetworkMonitor.sh
+sed -i '3 a ser2net' /usr/bin/Start_NetworkMonitor.sh
+sed -i '4 a exit 0' /usr/bin/Start_NetworkMonitor.sh
+sed -i '2 a exit 0' /usr/bin/Start_LuaUPnP.sh
 sed -i '2 a exit 0' /usr/bin/cmh-ra-daemon.sh
 sed -i '2 a exit 0' /usr/bin/relay-daemon.sh
 sed -i '2 a exit 0' /usr/bin/tech-ra-daemon.sh
