@@ -14,7 +14,7 @@ opkg update
 opkg install ser2net
 echo '3333:raw:0:/dev/ttyS0:115200 8DATABITS NONE 1STOPBIT' >> /etc/ser2net.conf
 echo "zwave configured on port 3333"
-echo '3300:raw:0:/dev/ttyS2:57600 8DATABITS NONE 1STOPBIT' >> /etc/ser2net.conf
+echo '3000:raw:0:/dev/ttyS2:57600 8DATABITS NONE 1STOPBIT' >> /etc/ser2net.conf
 echo "zigbee configured on port 3000"
 echo "Disabling vera programs"
 sed -i '9s/.*/#&/' /etc/init.d/lighttpd
