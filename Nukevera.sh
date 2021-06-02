@@ -16,6 +16,16 @@ echo '3333:raw:0:/dev/ttyS0:115200 8DATABITS NONE 1STOPBIT' >> /etc/ser2net.conf
 echo "zwave configured on port 3333"
 echo '3300:raw:0:/dev/ttyS2:57600 8DATABITS NONE 1STOPBIT' >> /etc/ser2net.conf
 echo "zigbee configured on port 3000"
+echo "Backing up Vera files"
+mkdir /root/backup
+cp /etc/init.d/lighttpd /root/backup/
+cp /etc/init.d/ntpclient /root/backup/
+cp /usr/bin/Start_NetworkMonitor.sh /root/backup/
+cp /usr/bin/Start_LuaUPnP.sh /root/backup/
+cp /usr/bin/cmh-ra-daemon.sh /root/backup/
+cp /usr/bin/relay-daemon.sh /root/backup/
+cp /usr/bin/tech-ra-daemon.sh /root/backup/
+cp /usr/bin/Start_serproxy.sh /root/backup/
 echo "Disabling vera programs"
 sed -i '9s/.*/#&/' /etc/init.d/lighttpd
 sed -i '10s/.*/#&/' /etc/init.d/lighttpd
